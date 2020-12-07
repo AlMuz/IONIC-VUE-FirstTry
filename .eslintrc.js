@@ -13,7 +13,11 @@ module.exports = {
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-    'vue/no-deprecated-slot-attribute': 'off'
+    'vue/no-deprecated-slot-attribute': 'off',
+    'vue/component-definition-name-casing': ['error', 'PascalCase'],
+    'vue/component-name-in-template-casing': ['error', 'kebab-case'],
+    'vue/custom-event-name-casing': 'off',
+    'vue/no-v-html': 'off'
   },
   overrides: [
     {
