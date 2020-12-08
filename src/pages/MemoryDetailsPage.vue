@@ -3,12 +3,20 @@
     :page-title="memoryData ? memoryData.title : 'Loading....'"
     page-default-back="/memories"
   >
-    <h2>The details page</h2>
-    <p v-if="memoryData">{{ memoryData.id }}</p>
+    <memory-overview
+      :title="memoryData.title"
+      :description="memoryData.description"
+      :image="memoryData.image"
+    ></memory-overview>
   </base-layout>
 </template>
 <script>
+import MemoryOverview from '../components/memories/MemoryOverview'
+
 export default {
+  components: {
+    MemoryOverview
+  },
   data() {
     return {
       memoryId: this.$route.params.id
